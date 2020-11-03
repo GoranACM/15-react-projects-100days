@@ -5,11 +5,6 @@ import SingleQuestion from './Question';
 function App() {
   const [questions, setQuestion] = useState(data);
 
-  useEffect(() => {
-    {
-    }
-  }, []);
-
   return (
     <main>
       <div className='container'>
