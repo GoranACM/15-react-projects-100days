@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import List from './List';
 import Alert from './Alert';
 
@@ -69,6 +69,12 @@ function App() {
     setName(specificItem.title);
   };
 
+  const itemInput = useRef(null);
+
+  const handleFocus = () => {
+    itemInput.current.focus();
+  };
+
   useEffect(() => {
     localStorage.setItem('list', JSON.stringify(list));
   }, [list]);
@@ -85,8 +91,9 @@ function App() {
             placeholder='e.g. Cucumbers'
             value={name}
             onChange={(e) => setName(e.target.value)}
+            ref={itemInput}
           />
-          <button type='submit' className='submit-btn'>
+          <button type='submit' className='submit-btn' onClick={handleFocus}>
             {isEditing ? 'edit' : 'add'}
           </button>
         </div>
