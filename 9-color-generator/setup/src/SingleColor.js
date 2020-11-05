@@ -17,7 +17,7 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
 
   return (
     <article
-      className={`color ${index > 8 && 'color-light'}`}
+      className={`color ${index > 10 && 'color-light'}`}
       style={{ backgroundColor: `rgb(${bcg})` }}
       onClick={() => {
         setAlert(true);
@@ -26,7 +26,11 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
     >
       <p className='percent-value'>{weight}%</p>
       <p className='color-value'>{hexValue}</p>
-      {alert && <p className='alert'>copied to clipboard</p>}
+      {alert && (
+        <p className={`alert ${index > 10 && 'alertWhite'}`}>
+          copied to clipboard
+        </p>
+      )}
     </article>
   );
 };

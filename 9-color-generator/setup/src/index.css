@@ -214,3 +214,7 @@ input.error {
   font-size: 0.75rem;
   margin-top: 0.5rem;
 }
+
+.alertWhite {
+  color: var(--clr-white);
+}
