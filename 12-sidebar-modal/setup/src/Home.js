@@ -7,7 +7,7 @@ const Home = () => {
       <button className='sidebar-toggle'>
         <FaBars />
       </button>
-      <button className='show-modal'>show modal</button>
+      <button className='btn'>show modal</button>
     </main>
   );
 };

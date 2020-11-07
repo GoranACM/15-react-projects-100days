@@ -6,7 +6,7 @@ import { social, links } from './data';
 const Sidebar = () => {
   // const [links, setLinks] = useState(false);
   return (
-    <aside className={`sidebar show-sidebar`}>
+    <aside className={`sidebar`}>
       <div className='sidebar-header'>
         <img src={logo} className='logo' alt='CA' />
         <button className='close-btn'>
