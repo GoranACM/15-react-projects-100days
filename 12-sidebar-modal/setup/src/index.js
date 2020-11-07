@@ -5,7 +5,9 @@ import { AppProvider } from './context';
 import App from './App';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
