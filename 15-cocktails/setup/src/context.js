@@ -15,6 +15,7 @@ const AppProvider = ({ children }) => {
       const response = await fetch(`${url}${searchTerm}`);
       const data = await response.json();
       const { drinks } = data;
+
       if (drinks) {
         const newCocktails = drinks.map((item) => {
           const {
